@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yo Maquillo · Cejas, labios y maquillaje en el centro de Córdoba</title>
+<meta name="description" content="Marta de la Coba: diseño y reconstrucción de cejas, microblading, labios, maquillaje de eventos y cursos individuales. C. Rodríguez Sánchez 14, Centro de Córdoba.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#A83850">
+<link rel="icon" href="../img/yo.svg" type="image/svg+xml">
+<link rel="preload" href="../fonts/albertsans-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/firma.svg" as="image">
+<!--
+  PROPUESTA · 11-nov-2026 · OpsPilot
+  Fuentes: logo real de yomaquillo.com (vectorizado fiel con potrace, fuente/trazar.py),
+  colores medidos (logo #A83850 y #546C6C; rosa de su local medido en la foto de su ficha de Google, aclarado),
+  reseñas literales de su ficha de Google (11-nov), servicios y duración del microblading de su web.
+  Pendiente de Marta: precios, fotos reales de resultados, horario, nº de alumnas/años.
+  Análisis completo en NotionPilot: proyecto «Yo Maquillo · web», doc bd219a0d.
+-->
+<style>
+@font-face{font-family:"Albert Sans";src:url(../fonts/albertsans-var-latin.woff2) format("woff2");font-weight:300 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Albert Sans";src:url(../fonts/albertsans-var-latin-ext.woff2) format("woff2");font-weight:300 800;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{
+  --frambuesa:#A83850;      /* su logo, medido */
+  --frambuesa-2:#8C2B42;    /* la misma, más baja */
+  --verde:#546C6C;          /* «YO MAQUILLO» del logo, medido */
+  --rosa:#F3E6E5;           /* la pared de su local (tono medido, aclarado) */
+  --rosa-2:#E9D5D3;
+  --papel:#FFF8F6;
+  --tinta:#2A1E21;
+  --tinta-2:#5E4C50;
+  --curva:cubic-bezier(.2,.7,.2,1);
+  --dur:.45s;
+  --ancho:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);font:400 1.0625rem/1.6 "Albert Sans",system-ui,sans-serif;font-optical-sizing:auto}
+main{overflow-x:clip}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+p{margin:0}
+.envoltura{max-width:var(--ancho);margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+
+/* franja de propuesta */
+.franja{background:var(--tinta);color:var(--rosa);font-size:.8125rem;text-align:center;padding:.45rem 16px}
+
+/* cabecera */
+.cab{background:var(--papel);border-bottom:1px solid var(--rosa-2);position:sticky;top:0;z-index:20}
+.cab .envoltura{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px}
+.cab .logo{width:clamp(150px,18vw,190px)}
+.cab nav{display:flex;gap:1.6rem;font-size:.95rem}
+.cab nav a{text-decoration:none;color:var(--tinta-2)}
+.cab nav a:hover{color:var(--frambuesa)}
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.3rem;border:0;border-radius:3px;font:600 1rem/1.2 "Albert Sans",sans-serif;text-decoration:none;cursor:pointer;transition:background var(--dur) var(--curva),color var(--dur) var(--curva)}
+.boton--marca{background:var(--frambuesa);color:var(--papel)}
+.boton--marca:hover{background:var(--frambuesa-2)}
+.boton--claro{background:var(--papel);color:var(--frambuesa)}
+.boton--claro:hover{background:var(--rosa)}
+.boton svg{width:20px;height:20px;flex:none}
+.cab .boton{min-height:42px;padding:.55rem 1rem;font-size:.95rem}
+@media (max-width:860px){.cab nav{display:none}}
+
+/* PORTADA: el «Yo» medido como una ceja */
+.portada{background:var(--frambuesa);color:var(--papel);position:relative}
+.portada .envoltura{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:center;gap:clamp(1rem,4vw,4rem);min-height:min(88vh,760px);padding-top:3rem;padding-bottom:3rem}
+.portada h1{font-size:clamp(2.7rem,6.4vw,5.6rem);font-weight:750;letter-spacing:-.035em;max-width:9ch}
+.portada .entrada{margin-top:1.5rem;font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:34ch;color:#FBE9EC}
+.portada .acciones{display:flex;flex-wrap:wrap;gap:.8rem 1.4rem;align-items:center;margin-top:2rem}
+.portada .acciones a.enlace{color:var(--papel);font-weight:600;text-underline-offset:5px}
+.portada .datos{margin-top:2.2rem;font-size:.92rem;color:#F4D3DA;display:flex;flex-wrap:wrap;gap:.3rem 1.2rem}
+.firma{position:relative;justify-self:end;width:min(100%,600px)}
+.firma img{width:100%;aspect-ratio:320/370}
+.firma .marca{position:absolute;font-size:.9rem;font-weight:600;color:var(--papel);white-space:nowrap}
+.firma .m-inicio{left:8.1%;top:31.6%;transform:translate(calc(-100% - 12px),-50%)}
+.firma .m-arco{left:44.4%;top:0;transform:translate(-50%,-150%)}
+.firma .m-final{left:95%;top:36.5%;transform:translate(-50%,14px)}
+.firma .m-ala{left:8.1%;bottom:0;transform:translate(-30%,120%)}
+@media (max-width:860px){
+  .portada .envoltura{grid-template-columns:1fr;min-height:0;padding-top:2.5rem}
+  .firma{order:-1;justify-self:center;width:min(78vw,420px);margin-bottom:.5rem}
+  .portada h1{max-width:12ch}
+}
+
+/* LA MEDICIÓN: herramienta */
+.medicion{background:var(--rosa);padding:clamp(4rem,8vw,7rem) 0}
+.medicion h2{font-size:clamp(2rem,4.2vw,3.4rem);max-width:15ch}
+.medicion .intro{margin-top:1rem;max-width:52ch;color:var(--tinta-2)}
+.mesa{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.5rem,4vw,3.5rem);margin-top:3rem;align-items:start}
+.opciones{display:flex;flex-direction:column;border-top:1px solid #D9C2C0}
+.opciones button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:2.2rem 1fr;align-items:center;gap:.6rem;padding:1.05rem .3rem;border-bottom:1px solid #D9C2C0;cursor:pointer;font-size:1.05rem;font-weight:500;color:var(--tinta);transition:color var(--dur) var(--curva)}
+.opciones button .n{font-size:.85rem;color:var(--verde);font-variant-numeric:tabular-nums}
+.opciones button:hover{color:var(--frambuesa)}
+.opciones button[aria-pressed="true"]{color:var(--frambuesa);font-weight:700}
+.opciones button[aria-pressed="true"] .n{color:var(--frambuesa)}
+.opciones button:focus-visible{outline:3px solid var(--verde);outline-offset:-3px}
+.ficha{background:var(--papel);border-radius:4px;box-shadow:0 1px 0 #D9C2C0,0 24px 48px -28px rgba(84,40,50,.35);padding:clamp(1.4rem,3vw,2.2rem);position:sticky;top:96px}
+.ficha .cabeza{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--rosa-2);padding-bottom:1rem}
+.ficha .cabeza small{display:block;color:var(--verde);font-size:.85rem}
+.ficha .cabeza h3{font-size:1.5rem;margin-top:.2rem}
+.ficha .esquema{width:120px;flex:none}
+.ficha dl{margin:0}
+.ficha .fila{display:grid;grid-template-columns:8.5rem 1fr;gap:1rem;padding:1rem 0;border-bottom:1px dashed var(--rosa-2)}
+.ficha dt{color:var(--verde);font-size:.92rem;font-weight:600}
+.ficha dd{margin:0}
+.pend{display:inline-block;background:var(--rosa);color:var(--tinta-2);font-size:.85rem;padding:.1rem .45rem;border-radius:2px}
+.ficha .boton{margin-top:1.4rem;width:100%}
+.ficha .nota{margin-top:.8rem;font-size:.85rem;color:var(--tinta-2)}
+.ficha [data-cambia]{transition:opacity .25s var(--curva)}
+.ficha.cambiando [data-cambia]{opacity:0}
+@media (max-width:860px){.mesa{grid-template-columns:1fr}.ficha{position:static}.ficha .fila{grid-template-columns:1fr;gap:.2rem}}
+
+/* EL ESPEJO: opiniones en el espejo de camerino de su local */
+.espejo-sec{background:var(--tinta);color:var(--papel);padding:clamp(4rem,8vw,7rem) 0}
+.espejo-sec .envoltura{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,4rem);align-items:center}
+.espejo-sec h2{font-size:clamp(2rem,4vw,3.2rem);max-width:12ch}
+.espejo-sec .lado p{margin-top:1rem;color:#D8C7CA;max-width:38ch}
+.espejo-sec .lado a{display:inline-block;margin-top:1.4rem;color:var(--rosa);font-weight:600;text-underline-offset:5px}
+.espejo{position:relative;padding:34px;border-radius:10px;background:#3A2B2F}
+.espejo::before,.espejo::after{content:"";position:absolute;top:34px;bottom:34px;width:14px;background:radial-gradient(circle at 50% 7px,#FFF4DE 0 5px,rgba(255,220,170,.35) 6px,transparent 11px) 0 0/14px 52px;background-repeat:no-repeat space}
+.espejo::before{left:10px}.espejo::after{right:10px}
+.cristal{background:linear-gradient(135deg,#F7EEEC 0%,#EADCDA 55%,#F4E9E7 100%);color:var(--tinta);border-radius:4px;padding:clamp(1.6rem,4vw,3rem) clamp(1.4rem,4vw,2.8rem);min-height:320px;position:relative}
+.cristal blockquote{margin:0;font-size:clamp(1.35rem,2.4vw,1.9rem);font-weight:600;line-height:1.3;letter-spacing:-.01em;max-width:24ch}
+.cristal figcaption{margin-top:1.2rem;font-size:.92rem;color:var(--tinta-2)}
+.notas{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.nota-pegada{background:var(--papel);color:var(--tinta);border-left:4px solid var(--frambuesa);padding:.9rem 1rem;font-size:.95rem;max-width:250px;box-shadow:0 10px 18px -12px rgba(0,0,0,.45)}
+.nota-pegada:nth-child(1){transform:rotate(-1.6deg)}
+.nota-pegada:nth-child(2){transform:rotate(1.2deg)}
+.nota-pegada span{display:block;margin-top:.4rem;font-size:.82rem;color:var(--tinta-2)}
+@media (max-width:860px){.espejo-sec .envoltura{grid-template-columns:1fr}.espejo{padding:26px 28px}.espejo::before{left:7px}.espejo::after{right:7px}}
+
+/* ESCUELA Y EVENTOS */
+.dos{padding:clamp(4rem,8vw,7rem) 0}
+.dos .envoltura{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,5vw,5rem);align-items:start}
+.escuela h2{font-size:clamp(2rem,4.4vw,3.6rem);max-width:13ch}
+.escuela p{margin-top:1.2rem;max-width:46ch;color:var(--tinta-2)}
+.pautado{margin-top:2rem;background:repeating-linear-gradient(transparent 0 33px,var(--rosa-2) 33px 34px);padding:.25rem 0 0 0;border-left:2px solid var(--frambuesa);padding-left:1.2rem;max-width:44ch}
+.pautado li{list-style:none;line-height:34px;font-weight:500}
+.pautado ol{margin:0;padding:0;counter-reset:p}
+.pautado li::before{counter-increment:p;content:counter(p) ". ";color:var(--frambuesa);font-weight:700}
+.eventos{background:var(--rosa);padding:clamp(1.6rem,3vw,2.4rem);border-radius:4px}
+.eventos h3{font-size:1.7rem}
+.eventos p{margin-top:.8rem;color:var(--tinta-2)}
+.semana{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:1.4rem}
+.semana span{display:grid;place-items:center;aspect-ratio:1;border-radius:3px;background:var(--papel);font-size:.85rem;color:var(--tinta-2)}
+.semana .si{background:var(--frambuesa);color:var(--papel);font-weight:700}
+.eventos .leyenda{margin-top:.7rem;font-size:.85rem}
+@media (max-width:860px){.dos .envoltura{grid-template-columns:1fr}}
+
+/* DÓNDE: el rótulo colgado de su forja */
+.donde{background:var(--papel);border-top:1px solid var(--rosa-2);padding:clamp(4rem,8vw,6rem) 0}
+.donde .envoltura{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:center}
+.rotulo{max-width:520px}
+.donde h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.donde dl{margin:1.5rem 0 0}
+.donde .fila{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--rosa-2)}
+.donde dt{color:var(--verde);font-weight:600;font-size:.95rem}
+.donde dd{margin:0}
+@media (max-width:860px){.donde .envoltura{grid-template-columns:1fr}}
+
+/* CIERRE */
+.cierre{background:var(--frambuesa);color:var(--papel);padding:clamp(4rem,8vw,6.5rem) 0;overflow:hidden;position:relative}
+.cierre .envoltura{position:relative;z-index:1}
+.cierre h2{font-size:clamp(2.4rem,5.4vw,4.6rem);max-width:12ch;letter-spacing:-.035em}
+.cierre p{margin-top:1rem;max-width:40ch;color:#FBE9EC}
+.cierre .acciones{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;align-items:center;margin-top:2rem}
+.cierre .acciones a.enlace{color:var(--papel);font-weight:600;text-underline-offset:5px}
+.cierre .yo-fondo{position:absolute;right:-4%;bottom:-18%;width:min(56vw,620px);opacity:.13;pointer-events:none}
+.pie{background:var(--tinta);color:#CDBBBF;font-size:.88rem;padding:2.2rem 0}
+.pie .envoltura{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.pie img{width:150px}
+.pie a{color:var(--rosa)}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (prefers-reduced-motion:no-preference){
+  .portada .texto>*{animation:sube .7s var(--curva) both}
+  .portada .texto>*:nth-child(2){animation-delay:.08s}
+  .portada .texto>*:nth-child(3){animation-delay:.16s}
+  .portada .texto>*:nth-child(4){animation-delay:.24s}
+  @keyframes sube{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Yo Maquillo","founder":{"@type":"Person","name":"Marta de la Coba Fernández"},
+"url":"https://yomaquillo.com/","telephone":"+34629067427",
+"address":{"@type":"PostalAddress","streetAddress":"C. Rodríguez Sánchez, 14","postalCode":"14003","addressLocality":"Córdoba","addressCountry":"ES"},
+"geo":{"@type":"GeoCoordinates","latitude":37.8833732,"longitude":-4.7808561},
+"sameAs":["https://www.instagram.com/martadelacoba_/"],
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"14"}}
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></symbol>
+  <symbol id="i-esquema" viewBox="0 0 120 70"><g fill="none" stroke="#546C6C" stroke-width="1" stroke-opacity=".7"><line x1="14" y1="68" x2="14" y2="22"/><line x1="14" y1="68" x2="68" y2="8"/><line x1="14" y1="68" x2="112" y2="30"/></g><path d="M10 30c18-14 40-24 58-22 18 2 32 12 46 24-16-7-30-12-46-12-20 0-36 6-58 16z" fill="#A83850"/><g fill="#546C6C"><circle cx="14" cy="24" r="2.4"/><circle cx="68" cy="8" r="2.4"/><circle cx="112" cy="30" r="2.4"/></g></symbol>
+</svg>
+
+<div class="franja">Propuesta en revisión para Yo Maquillo · textos y precios pendientes de validar con Marta</div>
+
+<header class="cab">
+  <div class="envoltura">
+    <a href="#inicio" aria-label="Yo Maquillo, inicio"><img class="logo" src="../img/logo.svg" alt="Yo Maquillo · Marta de la Coba" width="405" height="112"></a>
+    <nav aria-label="Principal">
+      <a href="#medicion">Cejas y labios</a>
+      <a href="#espejo">Opiniones</a>
+      <a href="#escuela">Cursos y eventos</a>
+      <a href="#donde">Dónde estoy</a>
+    </nav>
+    <a class="boton boton--marca" href="https://wa.me/34629067427?text=Hola%20Marta%2C%20quiero%20pedir%20cita" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir cita</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="portada" aria-labelledby="t-portada">
+    <div class="envoltura">
+      <div class="texto">
+        <h1 id="t-portada">Tus cejas, no las de moda.</h1>
+        <p class="entrada">Soy Marta de la Coba. Antes de tocar nada, mido tu cara: dónde empieza tu ceja, dónde se arquea y dónde termina. Después la diseño o la reconstruyo pelo a pelo.</p>
+        <div class="acciones">
+          <a class="boton boton--claro" href="https://wa.me/34629067427?text=Hola%20Marta%2C%20quiero%20pedir%20cita" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir cita por WhatsApp</a>
+          <a class="enlace" href="#medicion">¿Cómo son tus cejas hoy?</a>
+        </div>
+        <p class="datos"><span>C. Rodríguez Sánchez, 14 · Centro de Córdoba</span><span>4,6 en Google · 14 opiniones</span></p>
+      </div>
+      <figure class="firma" aria-label="El «Yo» de la marca medido como una ceja: inicio, arco y final">
+        <img src="../img/firma.svg" alt="" width="320" height="370" fetchpriority="high">
+        <span class="marca m-arco" aria-hidden="true">arco</span>
+        <span class="marca m-inicio" aria-hidden="true">inicio</span>
+        <span class="marca m-final" aria-hidden="true">final</span>
+      </figure>
+    </div>
+  </section>
+
+  <section class="medicion" id="medicion" aria-labelledby="t-medicion">
+    <div class="envoltura">
+      <h2 id="t-medicion">¿Cómo son tus cejas hoy?</h2>
+      <p class="intro">Elige lo que más se parezca a tu caso. Te cuento qué miraría y cómo lo trabajaría, y te dejo el mensaje escrito para que me lo mandes.</p>
+      <div class="mesa">
+        <div class="opciones" role="group" aria-label="Tu caso">
+          <button type="button" data-k="finas" aria-pressed="true"><span class="n">01</span>Finas o con huecos</button>
+          <button type="button" data-k="antigua" aria-pressed="false"><span class="n">02</span>Una micropigmentación antigua que ya no me gusta</button>
+          <button type="button" data-k="forma" aria-pressed="false"><span class="n">03</span>Tengo pelo, pero no sé qué forma me favorece</button>
+          <button type="button" data-k="labios" aria-pressed="false"><span class="n">04</span>Quiero definir los labios</button>
+          <button type="button" data-k="evento" aria-pressed="false"><span class="n">05</span>Tengo una boda o un evento</button>
+          <button type="button" data-k="curso" aria-pressed="false"><span class="n">06</span>Quiero aprender a maquillarme</button>
+        </div>
+        <article class="ficha" aria-live="polite">
+          <div class="cabeza">
+            <div><small>Tu ficha</small><h3 data-cambia data-campo="titulo">Finas o con huecos</h3></div>
+            <svg class="esquema" viewBox="0 0 120 70" aria-hidden="true"><use href="#i-esquema"/></svg>
+          </div>
+          <dl data-cambia data-campo="filas">
+            <div class="fila"><dt>Lo que miro</dt><dd>Dónde falta pelo, hacia dónde crece el tuyo y el tono de tu piel.</dd></div>
+            <div class="fila"><dt>Cómo lo trabajo</dt><dd>Microblading: dibujo pelo a pelo la forma que corresponde a tu cara, sin copiar modas.</dd></div>
+            <div class="fila"><dt>Cuánto dura</dt><dd>Entre 12 y 18 meses, según tu piel y los cuidados. Después, un retoque.</dd></div>
+            <div class="fila"><dt>Precio</dt><dd><span class="pend">pendiente de Marta</span></dd></div>
+          </dl>
+          <a class="boton boton--marca" data-campo="wa" href="https://wa.me/34629067427" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Mandarle esto a Marta</a>
+          <p class="nota">Se abre WhatsApp con el mensaje escrito. Lo puedes cambiar antes de enviarlo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="espejo-sec" id="espejo" aria-labelledby="t-espejo">
+    <div class="envoltura">
+      <div class="lado">
+        <h2 id="t-espejo">Lo que dicen frente al espejo</h2>
+        <p>Opiniones de clientas en Google, copiadas tal cual. La palabra que más se repite es «confianza».</p>
+        <a href="https://www.google.com/maps/place/Yo+Maquillo/@37.8833732,-4.7808561,17z" target="_blank" rel="noopener">Ver las 14 opiniones en Google</a>
+      </div>
+      <div>
+        <div class="espejo">
+          <figure class="cristal">
+            <blockquote>«Primera vez me encantó, se ha convertido en mi centro de confianza, se nota la experiencia y profesionalidad.»</blockquote>
+            <figcaption>angela jimenez · Google</figcaption>
+          </figure>
+        </div>
+        <div class="notas">
+          <p class="nota-pegada">«Voy siempre a depilarme las cejas con cera y pinzas, mi sitio de confianza, me las deja fantásticas.»<span>Aurora González · Google</span></p>
+          <p class="nota-pegada">«Trato atento, profesional y personalizado que es lo que más se agradece en una tienda de estas caracteristicas.»<span>Montserrat DTP · Google</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dos" id="escuela" aria-label="Cursos y eventos">
+    <div class="envoltura">
+      <div class="escuela">
+        <h2>Y si quieres, te enseño.</h2>
+        <p>Doy cursos de maquillaje individuales y personalizados. Aprendes con tu cara, no con la de una modelo, y te llevas lo que de verdad vas a usar.</p>
+        <div class="pautado">
+          <ol>
+            <li>Una alumna cada vez: tú.</li>
+            <li>Empezamos por lo que quieres conseguir.</li>
+            <li>Practicas en tu cara, conmigo al lado.</li>
+          </ol>
+        </div>
+      </div>
+      <aside class="eventos" aria-labelledby="t-eventos">
+        <h3 id="t-eventos">Bodas y eventos</h3>
+        <p>Maquillaje para tu día, sobre todo en fin de semana. En el estudio o en tu casa.</p>
+        <div class="semana" aria-hidden="true"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span class="si">S</span><span class="si">D</span></div>
+        <p class="leyenda">Fines de semana disponibles para eventos.</p>
+        <a class="boton boton--marca" style="margin-top:1.2rem" href="https://wa.me/34629067427?text=Hola%20Marta%2C%20tengo%20un%20evento%20y%20quiero%20pedir%20maquillaje" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Consultar una fecha</a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="donde" id="donde" aria-labelledby="t-donde">
+    <div class="envoltura">
+      <svg class="rotulo" viewBox="0 0 520 250" role="img" aria-label="El rótulo de Yo Maquillo colgado de sus dos brazos de forja, como en su fachada">
+        <rect x="0" y="0" width="520" height="12" fill="#E9D5D3"/>
+        <g fill="none" stroke="#2A1E21" stroke-width="5" stroke-linecap="round">
+          <path d="M70 12v40c0 22-30 22-30 46 0 16 14 24 26 18"/>
+          <path d="M450 12v40c0 22 30 22 30 46 0 16-14 24-26 18"/>
+          <path d="M70 52c-14 0-20-10-14-18"/><path d="M450 52c14 0 20-10 14-18"/>
+        </g>
+        <rect x="58" y="96" width="404" height="140" rx="3" fill="#FFF8F6" stroke="#E9D5D3" stroke-width="2"/>
+        <line x1="66" y1="116" x2="66" y2="96" stroke="#2A1E21" stroke-width="3"/><line x1="454" y1="116" x2="454" y2="96" stroke="#2A1E21" stroke-width="3"/>
+        <image href="../img/logo.svg" x="86" y="118" width="348" height="96"/>
+      </svg>
+      <div>
+        <h2 id="t-donde">En el centro de Córdoba</h2>
+        <dl>
+          <div class="fila"><dt>Dirección</dt><dd>C. Rodríguez Sánchez, 14 · 14003 Córdoba</dd></div>
+          <div class="fila"><dt>Horario</dt><dd><span class="pend">pendiente de confirmar</span></dd></div>
+          <div class="fila"><dt>WhatsApp</dt><dd><a href="https://wa.me/34629067427" target="_blank" rel="noopener">629 06 74 27</a></dd></div>
+          <div class="fila"><dt>Instagram</dt><dd><a href="https://www.instagram.com/martadelacoba_/" target="_blank" rel="noopener">@martadelacoba_</a></dd></div>
+        </dl>
+        <p style="margin-top:1.4rem"><a href="https://www.google.com/maps/dir/?api=1&destination=Yo+Maquillo+C%C3%B3rdoba" target="_blank" rel="noopener">Cómo llegar en Google Maps</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre" aria-labelledby="t-cierre">
+    <img class="yo-fondo" src="../img/yo-claro.svg" alt="" width="300" height="300" loading="lazy">
+    <div class="envoltura">
+      <h2 id="t-cierre">Escríbeme y lo miramos.</h2>
+      <p>Cuéntame cómo tienes las cejas o qué necesitas. Si puedes, mándame una foto con luz natural y sin maquillaje.</p>
+      <div class="acciones">
+        <a class="boton boton--claro" href="https://wa.me/34629067427?text=Hola%20Marta%2C%20quiero%20pedir%20cita" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+        <a class="enlace" href="#medicion">Antes, rellena tu ficha</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">
+    <img src="../img/logo-claro.svg" alt="Yo Maquillo · Marta de la Coba" width="405" height="112" loading="lazy">
+    <p>© Yo Maquillo · Marta de la Coba Fernández · C. Rodríguez Sánchez 14, Córdoba</p>
+    <p><span class="pend">Aviso legal y privacidad · pendiente</span></p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const WA = 'https://wa.me/34629067427?text=';
+  const P = '<span class="pend">pendiente de Marta</span>';
+  const casos = {
+    finas:   {t:'Finas o con huecos', f:[['Lo que miro','Dónde falta pelo, hacia dónde crece el tuyo y el tono de tu piel.'],['Cómo lo trabajo','Microblading: dibujo pelo a pelo la forma que corresponde a tu cara, sin copiar modas.'],['Cuánto dura','Entre 12 y 18 meses, según tu piel y los cuidados. Después, un retoque.'],['Precio',P]], m:'tengo las cejas finas o con huecos y me interesa el microblading.'},
+    antigua: {t:'Una micropigmentación antigua', f:[['Lo que miro','El color que ha quedado, la forma y cuánto pigmento queda.'],['Cómo lo trabajo','Reconstrucción de cejas, que es mi especialidad. Lo valoramos en persona antes de decidir nada.'],['Cuánto dura','Depende de lo que haya: te lo digo cuando las vea.'],['Precio','Después de la valoración.']], m:'tengo una micropigmentación antigua que ya no me gusta y quiero que la valores.'},
+    forma:   {t:'Qué forma me favorece', f:[['Lo que miro','La estructura de tu cara: dónde empieza, dónde se arquea y dónde acaba tu ceja.'],['Cómo lo trabajo','Diseño de cejas con cera, pinzas y tinte, respetando tu forma natural.'],['Cada cuánto','Te digo cada cuánto conviene volver para mantenerla.'],['Precio',P]], m:'tengo pelo en las cejas pero no sé qué forma me favorece. Quiero un diseño.'},
+    labios:  {t:'Definir los labios', f:[['Lo que miro','El contorno, el volumen y la proporción con el resto de tu cara.'],['Cómo lo trabajo','Diseño de labios: realza el volumen, define el contorno y corrige proporciones, con un resultado natural.'],['Cuánto dura','Te lo explico en la consulta.'],['Precio',P]], m:'quiero informarme sobre el diseño de labios.'},
+    evento:  {t:'Una boda o un evento', f:[['Lo que miro','Tu piel, tu estilo y el tipo de evento.'],['Cómo lo trabajo','Maquillaje profesional para el día. Si lo prefieres, voy a tu casa.'],['Cuándo','Sobre todo en fin de semana.'],['Precio',P]], m:'tengo un evento y quiero que me maquilles. La fecha es: '},
+    curso:   {t:'Aprender a maquillarme', f:[['Cómo es','Un curso individual y personalizado: una alumna cada vez.'],['Con qué cara','La tuya: lo que aprendes te sirve al día siguiente.'],['Por dónde empezamos','Por lo que quieres conseguir.'],['Precio',P]], m:'me interesa un curso de maquillaje individual.'}
+  };
+  const ficha = document.querySelector('.ficha');
+  const titulo = ficha.querySelector('[data-campo="titulo"]');
+  const filas = ficha.querySelector('[data-campo="filas"]');
+  const wa = ficha.querySelector('[data-campo="wa"]');
+  const botones = [...document.querySelectorAll('.opciones button')];
+  const reducir = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function pinta(k){
+    const c = casos[k];
+    titulo.textContent = c.t;
+    filas.innerHTML = c.f.map(([a,b]) => `<div class="fila"><dt>${a}</dt><dd>${b}</dd></div>`).join('');
+    wa.href = WA + encodeURIComponent('Hola Marta, ' + c.m);
+  }
+  function elige(b){
+    botones.forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+    if (reducir) return pinta(b.dataset.k);
+    ficha.classList.add('cambiando');
+    setTimeout(() => { pinta(b.dataset.k); ficha.classList.remove('cambiando'); }, 200);
+  }
+  botones.forEach(b => b.addEventListener('click', () => elige(b)));
+  pinta('finas');
+})();
+</script>
+</body>
+</html>
